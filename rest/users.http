@@ -1,0 +1,27 @@
+GET http://localhost:3000/users HTTP/1.1
+
+###
+
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pepeeee"
+}
+###
+
+GET http://localhost:3000/comments HTTP/1.1
+###
+
+GET http://localhost:3000/comments?parentIdx HTTP/1.1
+
+###
+
+POST http://localhost:3000/comments HTTP/1.1
+content-type: application/json
+
+{
+    "text": "nested comments",
+    "userId": "64f9de27441a218b6602c2f4",
+    "parentId": "64f9dac92e33a4d255af2964"
+}
